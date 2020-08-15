@@ -1,7 +1,15 @@
 import React from 'react';
+import Menu from './containers/Menu';
+
+import GlobalStyle from './styles';
 
 const App: React.FC = () => {
-  return <h1>Hello App</h1>;
+  return (
+    <>
+      <GlobalStyle />
+      <Menu />
+    </>
+  );
 };
 
 export default App;
