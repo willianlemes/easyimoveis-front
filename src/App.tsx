@@ -1,7 +1,8 @@
 import React from 'react';
+import PropertyRegistration from './pages/propertyRegistration/PropertyRegistration';
 
 const App: React.FC = () => {
-  return <h1>Hello App</h1>;
+  return <PropertyRegistration />;
 };
 
 export default App;
