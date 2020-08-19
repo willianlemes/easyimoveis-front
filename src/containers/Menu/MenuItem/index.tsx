@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 
@@ -18,9 +18,14 @@ type MenuItemProps = {
    * [Material Icons](https://material-ui.com/pt/components/material-icons)
    * as the icon in the Menu Item.
    */
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 };
 
+/**
+ * `MenuItem` is a component that
+ * holds a link to some page.
+ * @param props The component received props.
+ */
 const MenuItem: React.FC<MenuItemProps> = ({
   text,
   icon,
