@@ -1,20 +1,12 @@
 import React from 'react';
-import {
-  Card,
-  CardHeader,
-  Avatar,
-  Divider,
-  CardContent
-} from '@material-ui/core';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
+
+import FormContainer from '../../containers/FormContainer';
 
 const Home: React.FC = () => (
-  <Card variant="elevation" raised>
-    <CardHeader avatar={<Avatar>H</Avatar>} title="Home" />
-    <Divider />
-    <CardContent>
-      <h1>Home</h1>
-    </CardContent>
-  </Card>
+  <FormContainer title="Cadastro de Pessoa" icon={<PersonAddIcon />}>
+    <h1>Formulários aqui</h1>
+  </FormContainer>
 );
 
 export default Home;
