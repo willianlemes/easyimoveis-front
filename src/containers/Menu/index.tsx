@@ -41,9 +41,21 @@ const Menu: React.FC = () => {
       <CardContent>
         <List component="nav">
           <List component="ul">
-            <MenuItem text="Negócios" icon={<WorkOutlinedIcon />} route="/" />
-            <MenuItem text="About" icon={<PersonAddIcon />} route="/about" />
-            <MenuItem text="Imóveis" icon={<HomeIcon />} route="/" />
+            <MenuItem
+              text="Negócios"
+              icon={<WorkOutlinedIcon />}
+              route="/negocios"
+            />
+            <MenuItem
+              text="Pessoas"
+              icon={<PersonAddIcon />}
+              route="/pessoas"
+            />
+            <MenuItem
+              text="Imóveis"
+              icon={<HomeIcon />}
+              route="/propriedades"
+            />
             <MenuItem text="Meu Perfil" icon={<PersonIcon />} route="/" />
             <MenuItem text="Sair" icon={<ExitToAppIcon />} route="/" />
           </List>
