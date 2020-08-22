@@ -1,15 +1,20 @@
 import React from 'react';
-import HomeIcon from '@material-ui/icons/Home';
-
+import HomeIcon from '@material-ui/icons/HomeOutlined';
+import { Divider } from '@material-ui/core';
 import FormContainer from '../../containers/FormContainer';
-
-import Fieldset from '../../components/Fieldset';
+import { ContainerTab, ContainerForm } from './styles';
 
 const Properties: React.FC = () => (
-  <FormContainer title="Cadastro de Imóveis" icon={<HomeIcon />}>
-    <Fieldset legend="Cadastro">
-      <h1>Fields goes here</h1>
-    </Fieldset>
+  <FormContainer title="Cadastro de Imoveis" icon={<HomeIcon />}>
+    <Divider />
+    <ContainerTab>
+      <h1>TAB1</h1>
+      <h1>TAB2</h1>
+    </ContainerTab>
+    <ContainerForm>
+      <h2>Sobre o Imóvel</h2>
+      <p>Proprietário</p>
+    </ContainerForm>
   </FormContainer>
 );
 
