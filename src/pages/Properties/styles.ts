@@ -1,4 +1,14 @@
 import styled from 'styled-components';
+import { makeStyles } from '@material-ui/core/styles';
+
+export const useStyles = makeStyles({
+  root: {
+    marginTop: 15,
+    width: '100%',
+    background: '#A9A9A9',
+    borderRadius: 10
+  }
+});
 
 export const ContainerTab = styled.div`
   display: flex;
@@ -15,6 +25,7 @@ export const ContainerTab = styled.div`
 `;
 export const ContainerForm = styled.div`
   margin-top: 3rem;
+  padding: 1rem;
   border: 3px;
   border-style: solid;
   border-color: #008b8b;
@@ -23,10 +34,14 @@ export const ContainerForm = styled.div`
   h2 {
     background-color: #008b8b;
     padding: 0.8rem;
-    margin-left: 3rem;
+    margin-left: 1rem;
     margin-right: 40rem;
     border-radius: 0.7rem;
     color: #fff;
-    margin-top: -2rem;
+    margin-top: -3rem;
+  }
+  p {
+    margin-top: 1rem;
+    font-size: 24px;
   }
 `;

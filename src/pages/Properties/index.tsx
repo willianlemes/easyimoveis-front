@@ -1,21 +1,32 @@
 import React from 'react';
 import HomeIcon from '@material-ui/icons/HomeOutlined';
-import { Divider } from '@material-ui/core';
+import { Divider, FormControl, Select, MenuItem } from '@material-ui/core';
 import FormContainer from '../../containers/FormContainer';
-import { ContainerTab, ContainerForm } from './styles';
+import { ContainerTab, ContainerForm, useStyles } from './styles';
 
-const Properties: React.FC = () => (
-  <FormContainer title="Cadastro de Imoveis" icon={<HomeIcon />}>
-    <Divider />
-    <ContainerTab>
-      <h1>TAB1</h1>
-      <h1>TAB2</h1>
-    </ContainerTab>
-    <ContainerForm>
-      <h2>Sobre o Imóvel</h2>
-      <p>Proprietário</p>
-    </ContainerForm>
-  </FormContainer>
-);
+const Properties: React.FC = () => {
+  const classes = useStyles();
+
+  return (
+    <FormContainer title="Cadastro de Imoveis" icon={<HomeIcon />}>
+      <Divider />
+      <ContainerTab>
+        <h1>TAB1</h1>
+        <h1>TAB2</h1>
+      </ContainerTab>
+      <ContainerForm>
+        <h2>Sobre o Imóvel</h2>
+        <p>Proprietário :</p>
+        <FormControl className={classes.root}>
+          <Select label="Dia da Semana" name="week_day" variant="outlined">
+            <MenuItem value="Proprietário 1">Proprietário 1</MenuItem>
+            <MenuItem value="Proprietário 2">Proprietário 2</MenuItem>
+            <MenuItem value="Proprietário 3">Proprietário 3</MenuItem>
+          </Select>
+        </FormControl>
+      </ContainerForm>
+    </FormContainer>
+  );
+};
 
 export default Properties;
