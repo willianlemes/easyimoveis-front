@@ -9,6 +9,12 @@ export const useStyles = makeStyles({
     borderRadius: 10
   }
 });
+export const ContainerInput = styled.div`
+  margin-top: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
 
 export const ContainerTab = styled.div`
   display: flex;

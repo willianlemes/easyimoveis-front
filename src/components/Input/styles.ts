@@ -1,6 +1,9 @@
-import styled from 'styled-components';
+import { makeStyles } from '@material-ui/core/styles';
 
-const ContainerInput = styled.div`
-  width: 100%;
-`;
-export default ContainerInput;
+const useStyles = makeStyles({
+  input: {
+    width: '97%',
+    marginTop: 15
+  }
+});
+export default useStyles;

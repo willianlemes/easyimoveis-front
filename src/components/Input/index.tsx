@@ -1,21 +1,16 @@
 import React, { ReactNode } from 'react';
 import TextField from '@material-ui/core/TextField';
-import { makeStyles } from '@material-ui/core/styles';
-import ContainerInput from './styles';
-
-export const useStyles = makeStyles({
-  input: {
-    width: '50%',
-    padding: 10
-  }
-});
+import useStyles from './styles';
 
 type InputsetProps = {
   /**
    * The fieldset's legend to be rendered.
    */
   placehouder: string;
-
+  /**
+   * The fieldset's legend to be rendered.
+   */
+  type?: string;
   /**
    * The fieldsets's children components.
    *
@@ -24,20 +19,21 @@ type InputsetProps = {
 };
 const Input: React.FC<InputsetProps> = ({
   placehouder,
+  type,
   children
 }: InputsetProps) => {
   const classes = useStyles();
   return (
-    <ContainerInput>
+    <>
       <TextField
         className={classes.input}
         id="outlined-search"
         label={placehouder}
-        type="search"
+        type={type}
         variant="outlined"
       />
       {children}
-    </ContainerInput>
+    </>
   );
 };
 

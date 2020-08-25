@@ -2,7 +2,12 @@ import React from 'react';
 import HomeIcon from '@material-ui/icons/HomeOutlined';
 import { Divider, FormControl, Select, MenuItem } from '@material-ui/core';
 import FormContainer from '../../containers/FormContainer';
-import { ContainerTab, ContainerForm, useStyles } from './styles';
+import {
+  ContainerTab,
+  ContainerForm,
+  useStyles,
+  ContainerInput
+} from './styles';
 import Input from '../../components/Input/index';
 
 const Properties: React.FC = () => {
@@ -25,8 +30,11 @@ const Properties: React.FC = () => {
             <MenuItem value="Proprietário 3">Proprietário 3</MenuItem>
           </Select>
         </FormControl>
-        <Input placehouder="Meu Input" />
-        <Input placehouder="Outro Input" />
+        <ContainerInput>
+          <Input placehouder="Finalidade" type="text" />
+          <Input placehouder="Tipo" type="text" />
+          <Input placehouder="Preço de Venda" type="number" />
+        </ContainerInput>
       </ContainerForm>
     </FormContainer>
   );
