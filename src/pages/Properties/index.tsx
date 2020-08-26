@@ -6,7 +6,8 @@ import {
   ContainerTab,
   ContainerForm,
   useStyles,
-  ContainerInput
+  ContainerInput,
+  ContainerLocation
 } from './styles';
 import Input from '../../components/Input/index';
 
@@ -36,6 +37,15 @@ const Properties: React.FC = () => {
           <Input placehouder="Preço de Venda" type="number" />
         </ContainerInput>
       </ContainerForm>
+      <ContainerLocation>
+        <h2>Localização</h2>
+        <ContainerInput>
+          <Input placehouder="Logradouro" type="text" />
+          <Input placehouder="Número" type="number" />
+          <Input placehouder="Bairro" type="text" />
+          <Input placehouder="Complemento" type="text" />
+        </ContainerInput>
+      </ContainerLocation>
     </FormContainer>
   );
 };
