@@ -52,8 +52,7 @@ body {
   color: #888888;
 }
 
-.app_form textarea,
-.app_form select {
+.app_form textarea {
   font-size: 1em;
   color: #888888;
   border: 2px solid #cccccc;
@@ -65,10 +64,6 @@ body {
 
 .app_form .input-error {
   border-color: #f00 !important;
-}
-
-.app_form select {
-  cursor: pointer;
 }
 
 .app_form textarea {
@@ -84,22 +79,9 @@ body {
   color: #888888;
 }
 
-.app_form select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
 .app_form .label_group {
   display: flex;
   width: 100%;
-}
-
-.app_form .label_group label {
-  flex-basis: calc(50% - var(--area-small));
-}
-
-.app_form .label_group label:first-child {
-  margin-right: var(--area-normal);
 }
 
 .app_form .label_check label {
