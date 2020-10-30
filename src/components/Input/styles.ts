@@ -12,6 +12,9 @@ export const StyledInput = styled.input`
 
 export const StyledLabel = styled.label`
   flex-basis: calc(50% - var(--area-small));
+  display: block;
+  margin-bottom: var(--area-normal);
+  cursor: pointer;
 
   label:first-child {
     margin-right: var(--area-normal);

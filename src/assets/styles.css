@@ -39,40 +39,9 @@ body {
 }
 
 /* FORM */
-.app_form label {
-  display: block;
-  margin-bottom: var(--area-normal);
-  cursor: pointer;
-}
-
-.app_form .field {
-  display: block;
-  margin-bottom: 2px;
-  font-size: var(--font-small);
-  color: #888888;
-}
-
-.app_form textarea {
-  font-size: 1em;
-  color: #888888;
-  border: 2px solid #cccccc;
-  display: block;
-  background: none;
-  width: 100%;
-  padding: 10px;
-}
 
 .app_form .input-error {
   border-color: #f00 !important;
-}
-
-.app_form textarea {
-  resize: none;
-}
-
-.app_form .label_group {
-  display: flex;
-  width: 100%;
 }
 
 .app_form .label_check label {
