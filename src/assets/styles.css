@@ -70,15 +70,6 @@ body {
   resize: none;
 }
 
-.app_form input[type='date'] {
-  -webkit-appearance: none;
-  font-size: 1em !important;
-  font-family: 'Open Sans', serif !important;
-  padding: 7px 10px !important;
-  font-weight: var(--font-normal);
-  color: #888888;
-}
-
 .app_form .label_group {
   display: flex;
   width: 100%;
