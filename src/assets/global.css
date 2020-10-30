@@ -1,0 +1,257 @@
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/*VARIABLES*/
+:root {
+  --font-small: 0.875em;
+  --font-normal: 1em;
+  --font-medium: 1.2em;
+  --font-large: 1.4em;
+
+  --color-default: #555555;
+  --color-green: #36ba9b;
+  --color-blue: #39aed9;
+  --color-yellow: #f5b946;
+  --color-red: #d94352;
+
+  --weight-light: 300;
+  --weight-normal: 400;
+  --weight-bold: 700;
+  --weight-black: 900;
+
+  --hover-color-green: #61ddbc;
+  --hover-color-blue: #66d4f1;
+  --hover-color-yellow: #fcd277;
+  --hover-color-red: #f76c82;
+  --hover-duration: 0.3s;
+
+  --gradient-green: linear-gradient(
+    to right,
+    #42e695 0%,
+    #3bb2b8 50%,
+    #42e695 100%
+  );
+  --gradient-blue: linear-gradient(
+    to right,
+    #17ead9 0%,
+    #6078ea 50%,
+    #17ead9 100%
+  );
+  --gradient-red: linear-gradient(
+    to right,
+    #622744 0%,
+    #c53364 50%,
+    #622744 100%
+  );
+  --gradient-yellow: linear-gradient(
+    to right,
+    #fce38a 0%,
+    #f38181 50%,
+    #fce38a 100%
+  );
+
+  --radius-normal: 5px;
+  --radius-medium: 10px;
+  --radius-large: 20px;
+  --radius-round: 50%;
+
+  --index-back: -1;
+  --index-fold: 2;
+  --index-menu: 3;
+  --index-modal: 4;
+}
+
+/*ELEMENTS*/
+img {
+  max-width: 100%;
+}
+
+img a {
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 20px 0 0 0;
+}
+
+embed,
+video,
+iframe,
+iframe[style] {
+  max-width: 100%;
+  height: auto;
+}
+
+.embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed iframe,
+.embed object,
+.embed embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset;
+  -webkit-text-fill-color: #555555 !important;
+}
+
+/*ICONS NORMALIZE*/
+[class^='icon-']:before,
+[class*=' icon-']:before {
+  position: relative !important;
+  top: 0.125em !important;
+  margin-right: 0.4em !important;
+}
+
+.icon-notext:before {
+  top: 0;
+  margin-right: 0 !important;
+}
+
+/*DEFAULT LOAD*/
+.ajax_load {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: calc(var(--index-modal) * 2);
+}
+
+.ajax_load_box {
+  margin: auto;
+  text-align: center;
+  color: #ffffff;
+  font-weight: var(--weight-bold);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.ajax_load_box_circle {
+  border: 16px solid #e3e3e3;
+  border-top: 16px solid var(--hover-color-green);
+  border-radius: 50%;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+
+  -webkit-animation: spin 1.2s linear infinite;
+  -o-animation: spin 1.2s linear infinite;
+  animation: spin 1.2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*CONTAINER*/
+.content,
+.container {
+  display: block;
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 60px 0;
+}
+
+/*EFFECTS*/
+.transition {
+  transition-duration: var(--hover-duration);
+}
+
+.radius {
+  -webkit-border-radius: var(--radius-normal);
+  -moz-border-radius: var(--radius-normal);
+  border-radius: var(--radius-normal);
+}
+
+.radius .col-2 {
+  width: 16.66% !important;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.al-center {
+  text-align: center;
+}
+
+.al-left {
+  text-align: left;
+}
+
+.al-right {
+  text-align: right;
+}
+
+/*GRADIENTS*/
+.gradient {
+  background-size: 200% auto;
+  transition-duration: 0.5s;
+}
+
+.gradient-green {
+  background-image: var(--gradient-green);
+}
+
+.gradient-blue {
+  background-image: var(--gradient-blue);
+}
+
+.gradient-yellow {
+  background-image: var(--gradient-yellow);
+}
+
+.gradient-red {
+  background-image: var(--gradient-red);
+}
+
+.gradient-hover:hover {
+  background-position: right center;
+}
