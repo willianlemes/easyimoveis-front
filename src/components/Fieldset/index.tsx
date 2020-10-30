@@ -1,30 +1,22 @@
-import React, { ReactNode } from 'react';
-import { Typography } from '@material-ui/core';
+import React from 'react';
 
-import { FieldsetContainer, Legend } from './styles';
+import { StyledFieldset, StyledLegend } from './styles';
 
-type FieldsetProps = {
-  /**
-   * The fieldset's legend to be rendered.
-   */
+interface FieldsetProps {
   legend: string;
-
-  /**
-   * The fieldsets's children components.
-   */
-  children: ReactNode;
-};
+  children: React.ReactNode;
+}
 
 const Fieldset: React.FC<FieldsetProps> = ({
   legend,
   children
-}: FieldsetProps) => (
-  <FieldsetContainer>
-    <Legend>
-      <Typography variant="overline">{legend}</Typography>
-    </Legend>
-    {children}
-  </FieldsetContainer>
-);
+}: FieldsetProps) => {
+  return (
+    <StyledFieldset>
+      <StyledLegend>{legend}</StyledLegend>
+      {children}
+    </StyledFieldset>
+  );
+};
 
 export default Fieldset;
