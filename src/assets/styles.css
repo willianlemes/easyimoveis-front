@@ -55,8 +55,7 @@ body {
 }
 
 .app_form textarea,
-.app_form select,
-.app_form input {
+.app_form select {
   font-size: 1em;
   color: #888888;
   border: 2px solid #cccccc;

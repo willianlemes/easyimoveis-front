@@ -1,39 +1,19 @@
-import React, { ReactNode } from 'react';
-import TextField from '@material-ui/core/TextField';
-import useStyles from './styles';
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
 
-type InputsetProps = {
-  /**
-   * The fieldset's legend to be rendered.
-   */
-  placehouder: string;
-  /**
-   * The fieldset's legend to be rendered.
-   */
-  type?: string;
-  /**
-   * The fieldsets's children components.
-   *
-   */
-  children?: ReactNode;
-};
-const Input: React.FC<InputsetProps> = ({
-  placehouder,
-  type,
-  children
-}: InputsetProps) => {
-  const classes = useStyles();
+import { StyledInput, StyledLabel, StyledSpan } from './styles';
+
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  name: string;
+  label: string;
+}
+
+const Input: React.FC<InputProps> = ({ label, ...props }: InputProps) => {
   return (
-    <>
-      <TextField
-        className={classes.input}
-        id="outlined-search"
-        label={placehouder}
-        type={type}
-        variant="outlined"
-      />
-      {children}
-    </>
+    <StyledLabel>
+      <StyledSpan>{label}</StyledSpan>
+      <StyledInput {...props} />
+    </StyledLabel>
   );
 };
 
