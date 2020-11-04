@@ -236,14 +236,6 @@ body {
   display: none;
 }
 
-/*APP FOOTER*/
-.app_footer {
-  text-align: center;
-  margin-top: var(--area-box);
-  font-size: var(--font-small);
-  color: var(--color-default);
-}
-
 /*APP BOX*/
 .app_box {
   display: flex;

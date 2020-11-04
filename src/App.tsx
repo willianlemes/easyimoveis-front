@@ -1,11 +1,13 @@
 import React from 'react';
-import {} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import './assets/global.css';
 import './assets/styles.css';
 
 import Menu from './components/Menu';
 import Routes from './routes';
+
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
@@ -31,35 +33,15 @@ const App: React.FC = () => {
       </header>
 
       <div className="app_box">
-        <nav className="app_sidebar radius box-shadow">
-          <div
-            data-mobilemenu="close"
-            className="app_sidebar_widget_mobile radius transition icon-error icon-notext"
-          />
-
-          <div className="app_sidebar_user app_widget_title">
-            <span className="user">
-              <img className="rounded" alt="" title="" src="" />
-              <span>Willian Lemes</span>
-            </span>
-            <span className="plan radius">Free</span>
-          </div>
-
+        <Router>
           <Menu />
-        </nav>
-
-        <main className="app_main">
-          <Routes />
-        </main>
+          <main className="app_main">
+            <Routes />
+          </main>
+        </Router>
       </div>
 
-      <footer className="app_footer">
-        <span className="icon-home">
-          EasyImóveis - Desenvolvido por Willian Lemes
-          <br />
-          &copy; EasyImóveis - Todos os direitos reservados
-        </span>
-      </footer>
+      <Footer />
     </div>
   );
 };
