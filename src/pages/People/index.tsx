@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 
@@ -46,12 +47,14 @@ interface ItemProps {
 const Item: React.FC<ItemProps> = ({ person }: ItemProps) => {
   const { id, name, nickname, profile, type } = person;
   return (
-    <article key={id} className="app_launch_item">
-      <Column>{name}</Column>
-      <Column>{nickname}</Column>
-      <Column>{profile}</Column>
-      <Column>{type}</Column>
-    </article>
+    <Link to={`pessoa/${id}`}>
+      <article key={id} className="app_launch_item">
+        <Column>{name}</Column>
+        <Column>{nickname}</Column>
+        <Column>{profile}</Column>
+        <Column>{type}</Column>
+      </article>
+    </Link>
   );
 };
 

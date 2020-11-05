@@ -387,32 +387,6 @@ body {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
 }
 
-.app_widget_title {
-  color: #888888;
-  border-bottom: 1px solid #cccccc;
-  margin-bottom: var(--area-normal);
-  padding-bottom: var(--area-small);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.app_widget_title h2 {
-  font-size: var(--font-normal);
-}
-
-.app_widget_title .action {
-  color: #ffffff;
-  background: var(--color-green);
-  padding: 2px 4px;
-  font-size: var(--font-small);
-  cursor: pointer;
-}
-
-.app_widget_title .action:hover {
-  background: var(--hover-color-green);
-}
-
 .app_widget_content {
   font-size: var(--font-small);
 }

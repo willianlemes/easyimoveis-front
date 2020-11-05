@@ -15,10 +15,6 @@ export const StyledLabel = styled.label`
   display: block;
   margin-bottom: var(--area-normal);
   cursor: pointer;
-
-  label:first-child {
-    margin-right: var(--area-normal);
-  }
 `;
 
 export const StyledSpan = styled.span`
