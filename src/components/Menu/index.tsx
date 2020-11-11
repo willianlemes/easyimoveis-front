@@ -1,5 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {
+  FaUserLock,
+  FaHome,
+  FaUserFriends,
+  FaBusinessTime,
+  FaDoorOpen
+} from 'react-icons/fa';
+import { BsFillPersonFill } from 'react-icons/bs';
 
 import { StyledMenu } from './styles';
 
@@ -13,46 +21,31 @@ const Menu: React.FC = () => {
 
       <div className="app_sidebar_user app_widget_title">
         <span className="user">
-          <img className="rounded" alt="" title="" src="" />
+          <BsFillPersonFill size={24} className="menu-icon" />
           <span>Willian Lemes</span>
         </span>
         <span className="plan radius">Free</span>
       </div>
 
       <StyledMenu>
-        <Link
-          className="icon-suitcase radius transition"
-          title="Dashboard"
-          to="/negocios"
-        >
+        <Link className="radius transition" title="Dashboard" to="/negocios">
+          <FaBusinessTime size={24} className="menu-icon" />
           Negócios
         </Link>
-        <Link
-          className="icon-user-plus radius transition"
-          title="Receber"
-          to="/pessoas"
-        >
+        <Link className="radius transition" title="Receber" to="/pessoas">
+          <FaUserFriends size={24} className="menu-icon" />
           Pessoas
         </Link>
-        <Link
-          className="icon-home radius transition"
-          title="Receber"
-          to="/imoveis"
-        >
+        <Link className="radius transition" title="Receber" to="/imoveis">
+          <FaHome size={24} className="menu-icon" />
           Imóveis
         </Link>
-        <Link
-          className="icon-user radius transition"
-          title="Meu Perfil"
-          to="/perfil"
-        >
+        <Link className="radius transition" title="Meu Perfil" to="/perfil">
+          <FaUserLock size={24} className="menu-icon" />
           Meu Perfil
         </Link>
-        <Link
-          className="icon-sign-out radius transition"
-          title="Sair"
-          to="/sair"
-        >
+        <Link className="radius transition" title="Sair" to="/sair">
+          <FaDoorOpen size={24} className="menu-icon" />
           Sair
         </Link>
       </StyledMenu>

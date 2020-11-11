@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { FaHome } from 'react-icons/fa';
 
 import './assets/global.css';
 import './assets/styles.css';
@@ -14,7 +15,8 @@ const App: React.FC = () => {
     <div className="app">
       <header className="app_header">
         <h1>
-          <a className="icon-home transition" href="/" title="EasyImóveis">
+          <a className="transition" href="/" title="EasyImóveis">
+            <FaHome size={24} className="menu-icon" />
             EasyImóveis
           </a>
         </h1>

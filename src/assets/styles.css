@@ -206,6 +206,8 @@ body {
 .app_header h1 a {
   color: #888888;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .app_header a:hover {
@@ -281,6 +283,8 @@ body {
 .app_sidebar_user .user {
   display: flex;
   align-items: center;
+  color: #888888;
+  font-weight: var(--weight-bold);
 }
 
 .app_sidebar_user .user img {
@@ -1072,4 +1076,8 @@ td {
 .menu a.active {
   background-color: var(--color-green);
   color: #ffffff;
+}
+
+.menu-icon {
+  margin-right: 15px;
 }

@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 export const StyledMenu = styled.div`
   a {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     padding: var(--area-small) var(--area-normal);
     background: var(--body-bg);
     margin-bottom: var(--area-small);

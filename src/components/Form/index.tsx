@@ -1,19 +1,18 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/prop-types */
 import React from 'react';
 
-import { StyledHeder } from './styles';
+import Header from '../Header';
 
-interface FormProps {
+type FormProps = {
   title: string;
-  children: React.ReactNode;
-}
+} & React.FormHTMLAttributes<HTMLFormElement>;
 
-const Form: React.FC<FormProps> = ({ title, children }: FormProps) => {
+const Form: React.FC<FormProps> = ({ title, children, ...props }) => {
   return (
     <div className="app_formbox app_widget">
-      <form className="app_form">
-        <StyledHeder>
-          <h2>{title}</h2>
-        </StyledHeder>
+      <form className="app_form" {...props}>
+        <Header>{title}</Header>
         {children}
       </form>
     </div>

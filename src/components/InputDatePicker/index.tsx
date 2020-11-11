@@ -17,7 +17,7 @@ const InputDatePicker: React.FC<InputDatePickerProps> = ({
   return (
     <StyledLabel>
       <StyledSpan>{label}</StyledSpan>
-      <StyledInputDatePicker {...props} type="date" />
+      <StyledInputDatePicker {...props} type="date" isError={false} />
     </StyledLabel>
   );
 };

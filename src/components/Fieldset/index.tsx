@@ -1,16 +1,13 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 import { StyledFieldset, StyledLegend } from './styles';
 
-interface FieldsetProps {
+type FieldsetProps = {
   legend: string;
-  children: React.ReactNode;
-}
+};
 
-const Fieldset: React.FC<FieldsetProps> = ({
-  legend,
-  children
-}: FieldsetProps) => {
+const Fieldset: React.FC<FieldsetProps> = ({ legend, children }) => {
   return (
     <StyledFieldset>
       <StyledLegend>{legend}</StyledLegend>

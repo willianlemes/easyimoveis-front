@@ -3,29 +3,15 @@ import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 
+import Header from '../../components/Header';
+
 interface IPerson {
   id: string;
   userId: string;
   name: string;
   nickname: string;
-  profile: string;
-  type: string;
-  genre: string;
-  datebirth: string;
-  rgIe: string;
-  cpfCnpj: string;
-  occupation: string;
-  email: string;
-  phone: string;
-  cellPhone: string;
-  address: string;
-  addressNumber: string;
-  neighborhood: string;
-  cep: string;
-  state: string;
-  city: string;
-  photo: string;
-  status: string;
+  profile: { value: string; label: string };
+  type: { value: string; label: string };
 }
 
 interface ColumnProps {
@@ -51,8 +37,8 @@ const Item: React.FC<ItemProps> = ({ person }: ItemProps) => {
       <article key={id} className="app_launch_item">
         <Column>{name}</Column>
         <Column>{nickname}</Column>
-        <Column>{profile}</Column>
-        <Column>{type}</Column>
+        <Column>{profile.label}</Column>
+        <Column>{type.label}</Column>
       </article>
     </Link>
   );
@@ -75,9 +61,7 @@ const People: React.FC = () => {
 
   return (
     <article className="app_widget">
-      <header className="app_widget_title">
-        <h2 className="icon-user-plus">Pessoas</h2>
-      </header>
+      <Header>Pessoas</Header>
 
       <nav className="menu">
         <ul>
