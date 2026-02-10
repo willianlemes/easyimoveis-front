@@ -33,7 +33,7 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.2",
     "@typescript-eslint/eslint-plugin": "^3.7.0",
-    "eslint": "^6.6.0",
+    "eslint": "^9.26.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-typescript": "^2.2.0",
